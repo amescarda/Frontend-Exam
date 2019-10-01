@@ -11,35 +11,39 @@ function sassTask() {
 }
 
 function jsTask() {
-  return gulp.src('js/*.js'),
-        uglify(),
-        gulp.dest('dist');
+	return gulp.src('/js/*.js')
+        .pipe(uglify())
+		.pipe(dest('dist'))
 }
 
-function watch() {
+// function watch() {
+// 	browserSync.init({
+// 		server: {
+// 			baseDir: './'
+// 		}
+// 	});
+// 	gulp.watch('./scss/*.scss', sassTask) // reload all scsss file and call the function sassTask
+// 	gulp.watch('./*.html').on('change', browserSync.reload) // reload the whole page 
+// 	gulp.watch('./js/*.js', jsTask) // reload all js file and call the function jsTask
+// }
+ 
+
+function watchTask() {
 	browserSync.init({
 		server: {
 			baseDir: './'
 		}
 	});
-	gulp.watch('./scss/*.scss', sassTask); // reload all scsss file and call the function sassTask
-	gulp.watch('./*.html').on('change', browserSync.reload); // reload the whole page 
-	gulp.watch('js/*.js', jsTask) // reload all js file and call the function jsTask
-
+	gulp.watch(['./scss/*.scss','js/*.js'],
+	gulp.parallel(sassTask,jsTask));
 }
- 
 
-// function watchTask() {
-// 	gulp.watch(['./scss/*.scss','js/*.js'],
-// 	gulp.parallel(sassTask,jsTask));
-// }
-
-exports.watch = watch;
-exports.sassTask = sassTask;
-exports.jsTask = jsTask;
-// exports.default = gulp.series(
-// 	gulp.parallel(sassTask,jsTask),
-// 	watchTask
-// );
+// exports.watch = watch;
+// exports.sassTask = sassTask;
+// exports.jsTask = jsTask;
+exports.default = gulp.series(
+	gulp.parallel(sassTask,jsTask),
+	watchTask
+)
 
 
