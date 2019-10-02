@@ -2,12 +2,13 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 const mainBowerFiles = require('main-bower-files');
+const inject = require('gulp-inject');
 const browserSync = require('browser-sync').create();
 
 const  file = {
-	sassPath : './scss/*.scss',
-	jsPath : './js/*.js',
-	htmlPath : './*.html',
+	sassPath : './app/scss/**/*.scss',
+	jsPath : './app/js/*.js',
+	htmlPath : 'index.html',
 }
 
 function sassTask() {
@@ -24,11 +25,12 @@ function jsTask() {
 		.pipe(browserSync.stream()) // stream changes to browser
 }
 
-// function bowerTask() {
-// 	return gulp.src(mainBowerFiles() , { base: '/bower_components/'  })
-//         .pipe(uglify())
-// 		.pipe(gulp.dest('dist'))
-// 		.pipe(browserSync.stream()) // stream changes to browser
+// function injectTask() {
+// 	const target = gulp.src(file.htmlPath);
+//   	const sources = gulp.src([file.jsPath, file.sassPath], {read: false});
+
+//   return target.pipe(inject(sources))
+//     .pipe(gulp.dest('dist'));
 // }
 
 function watch() {
@@ -46,5 +48,3 @@ exports.default = gulp.series(
 	gulp.parallel(sassTask,jsTask),
 	watch
 )
-
-
