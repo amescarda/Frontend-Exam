@@ -1,1 +1,3 @@
-console.log('hello test')
+$(document).ready(function() {
+	console.log('meow')
+})
