@@ -16,8 +16,8 @@ $helvetica: 'helvetica';
 }
 
 body {
-	& a {
 	margin: 0;
+	& a {
 	width: 100%;
 		text-decoration: none;
 		color : $black;
