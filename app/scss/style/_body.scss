@@ -1,9 +1,24 @@
 $black: #000000;
+$white: #ffffff;
+$yellow: #e7b932;
+$lightyellow : #e7b92f;
+$gray: #9c9c9c;
+$helvetica: 'helvetica';
+
+@font-face {
+	font-family: 'Lucida Calligraphy';
+	src: url('./lucida_calligraphy.ttf');
+}
+
+@font-face {
+	font-family: 'Yugo';
+	src: url('./yugothil.ttf');
+}
 
 body {
+	& a {
 	margin: 0;
 	width: 100%;
-	& a {
 		text-decoration: none;
 		color : $black;
 	}

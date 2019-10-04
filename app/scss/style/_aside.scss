@@ -1,4 +1,5 @@
 .aside {
+	padding-bottom: 20px;
 	& ul {
 		padding-left: 16px;
 	}
@@ -20,37 +21,39 @@
 		font-size: 30px;
 		line-height: 1.501;
 		margin-bottom: 0;
+		font-family: $helvetica;
 	}
 
 	&__dummy-banner {
 		text-align: center;
 		padding-top: 140px;
 		font-size:15px;
+		font-family: $helvetica;
 	}
 	&__hr {
 		border-top: 2px solid #000000;
-    	width: 310px;
+    	width: 300px;
 
 	}
 	&__article-image {
 		width: 112px;
-		height: 64px;
+		height: 77px;
 		float: left;
-		padding: 2px 10px;
+		padding: 2px 11px;
 
 	}
 
 	&__article {
-		padding-bottom: 10px;
+		padding: 5px 15px;
+		display: inline-block;
 
 	}
 
 	&__article-title {
-		font-size: 13px;
+		font-size: 12px;
 		margin: 0;
 		font-weight: bold;
 		line-height: 1.35em;
-		padding-right: 18px;
 
 	}
 
@@ -62,13 +65,14 @@
 	&__article-item-date {
 		font-size: 11px;
 		color: #9c9c9c;
+		font-family: $helvetica;
 
 	}
 	&__small-banner {
 		background-color: #666666;
 		height: 100px;
 		width: 310px;
-		margin: 15px 10px;
+		margin: 0px 12px;
 		color: #ffffff;
 
 	}
@@ -76,6 +80,7 @@
 	&__small-text {
 		padding-top: 40px;
 		text-align: center;
+		font-family: $helvetica;
 
 	}
 }
