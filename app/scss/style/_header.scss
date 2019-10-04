@@ -1,19 +1,19 @@
 @font-face {
-	font-family: "yu Gothib";
-	src: url('./app/font/yugothib.tff');
+	font-family: 'Lucida Calligraphy';
+	src: url('./lucida_calligraphy.ttf');
 }
 
-
 .header {
-	padding: 30px;
+	padding: 22px;
 	border-top: 2px solid #E7B92F;
 	
 
 	&__title {
-		font-family: "yu Gothic";
+		font-family: 'Lucida Calligraphy';
 		margin: 0;
 		text-align: center;
 		font-size: 60px;
+		letter-spacing: 5px;
 	}
 }
 

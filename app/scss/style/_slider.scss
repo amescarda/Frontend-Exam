@@ -1,10 +1,18 @@
+$white: #ffffff;
+@font-face {
+	font-family: 'Yugo';
+	src: url('./yugothil.ttf*');
+}
+
+
 .slider {
 	width: 100%;
 	overflow: hidden;
+	position: relative;
 
 	&__ul {
 		position: relative;
-		min-width: 300% ;
+		width: 300% ;
 		list-style: none;	
 		padding: 0;
 		margin: 0;
@@ -13,7 +21,71 @@
 	&__ul--li {
 	float: left;
 	width:33.33%;
-	height: 417px;
+	height: 418px;
 
 	}
+
+	&__figcaption {
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-49%, -57%);
+    text-align: center;
+	width: 100%;
+	color: $white,
+
+	}
+
+	&__figcaption--header {
+		color: $white;
+		font-size: 60pt;
+		font-weight: bold;
+		font-family: 'Yugo';
+		line-height: 0;
+	}
+
+
+	&__figcaption--subheader {
+		font-size: 16pt;
+		font-weight: bold;
+		font-family: 'Yugo';
+		margin: 0;
+	}
+
+	&__navigation {
+		position: absolute;
+		&--right {
+			right: 10%; 
+			top: 50%;
+		}
+		&--left {
+			left: 10%; 
+			float: left;
+			top: 50%;
+		}
+	}
+
+	&__nav {
+		position: absolute;
+		bottom: 0;
+		padding: 0;
+		left: 45%;
+	}
+
+	&__nav--dot {
+		height: 20px;
+		width: 20px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		text-decoration: none;
+		background-color: #ffffff;
+		margin: 0 7px;
+
+	}
+	.active {
+		background-color: #e7b932;
+	}
+
+
 }

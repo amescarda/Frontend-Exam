@@ -8,6 +8,7 @@ const browserSync = require('browser-sync').create();
 const  file = {
 	sassPath : './app/scss/**/*.scss',
 	jsPath : './app/js/*.js',
+	fontPath : './app/font/**/*.ttf',
 	htmlPath : 'index.html',
 }
 
@@ -25,13 +26,11 @@ function jsTask() {
 		.pipe(browserSync.stream()) // stream changes to browser
 }
 
-// function injectTask() {
-// 	const target = gulp.src(file.htmlPath);
-//   	const sources = gulp.src([file.jsPath, file.sassPath], {read: false});
-
-//   return target.pipe(inject(sources))
-//     .pipe(gulp.dest('dist'));
-// }
+function fontTask() {
+	return gulp.src(file.fontPath)
+		.pipe(gulp.dest('dist'))
+		.pipe(browserSync.stream()) // stream changes to browser
+}
 
 function watch() {
 	browserSync.init({
@@ -42,9 +41,10 @@ function watch() {
 	gulp.watch(file.sassPath, sassTask) // reload all scsss file and call the function sassTask
 	gulp.watch(file.htmlPath).on('change', browserSync.reload) // reload the whole page 
 	gulp.watch(file.jsPath, jsTask) // reload all js file and call the function jsTask
+	gulp.watch(file.fontPath, fontTask) // reload all js file and call the function jsTask
 }
  
 exports.default = gulp.series(
-	gulp.parallel(sassTask,jsTask),
+	gulp.parallel(sassTask,jsTask,fontTask),
 	watch
 )

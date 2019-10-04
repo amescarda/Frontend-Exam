@@ -5,29 +5,202 @@ body {
     text-decoration: none;
     color: #000000; }
 
+@font-face {
+  font-family: 'Yugo';
+  src: url("./yugothil.ttf*"); }
+
 .slider {
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   .slider__ul {
     position: relative;
-    min-width: 300%;
+    width: 300%;
     list-style: none;
     padding: 0;
     margin: 0; }
   .slider__ul--li {
     float: left;
     width: 33.33%;
-    height: 417px; }
+    height: 418px; }
+  .slider__figcaption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-49%, -57%);
+    text-align: center;
+    width: 100%;
+    color: #ffffff; }
+  .slider__figcaption--header {
+    color: #ffffff;
+    font-size: 60pt;
+    font-weight: bold;
+    font-family: 'Yugo';
+    line-height: 0; }
+  .slider__figcaption--subheader {
+    font-size: 16pt;
+    font-weight: bold;
+    font-family: 'Yugo';
+    margin: 0; }
+  .slider__navigation {
+    position: absolute; }
+    .slider__navigation--right {
+      right: 10%;
+      top: 50%; }
+    .slider__navigation--left {
+      left: 10%;
+      float: left;
+      top: 50%; }
+  .slider__nav {
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+    left: 45%; }
+  .slider__nav--dot {
+    height: 20px;
+    width: 20px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ffffff;
+    margin: 0 7px; }
+  .slider .active {
+    background-color: #e7b932; }
 
 @font-face {
-  font-family: "yu Gothib";
-  src: url("./app/font/yugothib.tff"); }
+  font-family: 'Lucida Calligraphy';
+  src: url("./lucida_calligraphy.ttf"); }
 
 .header {
-  padding: 30px;
+  padding: 22px;
   border-top: 2px solid #E7B92F; }
   .header__title {
-    font-family: "yu Gothic";
+    font-family: 'Lucida Calligraphy';
     margin: 0;
     text-align: center;
-    font-size: 60px; }
+    font-size: 60px;
+    letter-spacing: 5px; }
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1080px;
+  margin-top: 40px; }
+
+.content {
+  float: left; }
+  .content ul {
+    list-style-type: none; }
+  .content__article {
+    width: 720px;
+    float: left; }
+  .content__article-item-date {
+    display: block;
+    margin: 0;
+    font-size: 14px;
+    color: #9c9c9c; }
+  .content__article-blog {
+    margin-bottom: 35px; }
+  .content__article-image {
+    height: 116px;
+    width: 207px;
+    float: left;
+    padding: 0 7px; }
+  .content__article-title {
+    font-size: 17px;
+    font-weight: bold;
+    margin: 1px;
+    letter-spacing: 0.04em; }
+  .content__article-title:hover {
+    color: #E7B92F; }
+  .content__article-short {
+    font-size: 13px;
+    margin: 0;
+    letter-spacing: 0.04em; }
+
+.footer {
+  padding: 10px;
+  background-color: #000000;
+  clear: both; }
+  .footer__btn-up {
+    background-color: red;
+    cursor: pointer; }
+  .footer__nav {
+    background-color: #000000;
+    clear: both; }
+    .footer__nav--left {
+      margin-left: 19%;
+      color: #ffffff;
+      display: inline-block; }
+    .footer__nav--right {
+      margin-right: 17%;
+      float: right;
+      color: #ffffff;
+      display: inline-block; }
+
+.footer__more {
+  clear: both;
+  background-color: #000000;
+  width: 250px;
+  padding: 17px;
+  margin: 0 auto 10%; }
+  .footer__more--text {
+    color: #ffffff;
+    text-align: center; }
+
+.footer__arrow {
+  width: 12px;
+  position: absolute;
+  padding-left: 200px; }
+
+.aside {
+  float: left;
+  background-color: #EFEFEF;
+  width: 360px; }
+  .aside ul {
+    padding-left: 16px; }
+  .aside__figure {
+    height: 300px;
+    width: 300px;
+    background-color: #ffffff;
+    margin: 25px auto; }
+  .aside__title {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.501;
+    margin-bottom: 0; }
+  .aside__dummy-banner {
+    text-align: center;
+    padding-top: 140px;
+    font-size: 15px; }
+  .aside__hr {
+    border-top: 2px solid #000000;
+    width: 310px; }
+  .aside__article-image {
+    width: 112px;
+    height: 64px;
+    float: left;
+    padding: 2px 10px; }
+  .aside__article {
+    padding-bottom: 10px; }
+  .aside__article-title {
+    font-size: 13px;
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.35em;
+    padding-right: 18px; }
+  .aside__article-title:hover {
+    color: #E7B92F; }
+  .aside__article-item-date {
+    font-size: 11px;
+    color: #9c9c9c; }
+  .aside__small-banner {
+    background-color: #666666;
+    height: 100px;
+    width: 310px;
+    margin: 15px 10px;
+    color: #ffffff; }
+  .aside__small-text {
+    padding-top: 40px;
+    text-align: center; }

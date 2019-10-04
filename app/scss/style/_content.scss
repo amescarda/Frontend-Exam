@@ -1,0 +1,53 @@
+main {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1080px;
+	margin-top: 40px;
+}
+.content {
+		float: left;
+
+	& ul {
+		list-style-type: none;
+	}
+
+	&__article {
+		width: 720px;
+		float: left;
+	}
+
+	&__article-item-date {
+		display: block;
+		margin: 0;
+		font-size: 14px;
+		color: #9c9c9c;
+	}
+	
+	&__article-blog {
+		margin-bottom: 35px;
+	}
+
+	&__article-image {
+		height: 116px;
+		width: 207px;
+		float: left;
+		padding: 0 7px;
+	}
+
+	&__article-title {
+		font-size: 17px;
+		font-weight: bold;
+		margin: 1px;
+		letter-spacing: 0.04em;
+	}
+
+	&__article-title:hover {
+		color:#E7B92F; 
+	}
+
+	&__article-short {
+		font-size: 13px;
+		margin: 0;
+		letter-spacing: 0.04em;
+	}
+}
